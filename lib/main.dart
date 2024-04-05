@@ -3,13 +3,15 @@ import 'dart:ui';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:new_c10_monday/home_screen.dart';
+import 'package:new_c10_monday/layout/home_screen.dart';
 import 'package:new_c10_monday/providers/language_provider.dart';
 import 'package:new_c10_monday/providers/my_theme_data_provider.dart';
-import 'package:new_c10_monday/tabs/settings_tab.dart';
+import 'package:new_c10_monday/screens/tabs/settings_tab.dart';
+import 'package:new_c10_monday/screens/widgets/search_widget.dart';
 import 'package:provider/provider.dart';
 
-import 'my_theme_data.dart';
+import 'screens/news_details_page.dart';
+import 'shared/styles/my_theme_data.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -57,6 +59,7 @@ class _MyAppState extends State<MyApp> {
       routes: {
         HomeScreen.routeName: (context) => HomeScreen(),
         SettingsTab.routeName: (context) => SettingsTab(),
+        SearchWidget.routeName: (context) => SearchWidget(),
       },
     );
   }

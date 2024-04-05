@@ -33,7 +33,7 @@ class MyThemeData {
           fontSize: 24, fontWeight: FontWeight.w700, color: whiteColor),
     ),
     brightness: Brightness.light,
-    scaffoldBackgroundColor: whiteColor,
+    scaffoldBackgroundColor: Colors.transparent,
     appBarTheme: AppBarTheme(
       iconTheme: IconThemeData(color: whiteColor, size: 32),
       backgroundColor: greenColor,
