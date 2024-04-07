@@ -49,7 +49,7 @@ class MoreDetails extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 20),
               Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),

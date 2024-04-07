@@ -44,19 +44,52 @@ class NewsDetailsPage extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 10),
-              Text(
-                articles.content ?? "",
-                style: TextStyle(fontSize: 16),
-              ),
               SizedBox(height: 20),
-              Text(
-                'Source: ${articles.source?.name ?? ""}',
-                style: TextStyle(
-                  fontSize: 16,
-                  fontStyle: FontStyle.italic,
+              Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: MyThemeData.whiteColor),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(height: 10),
+                      Text(
+                        articles.content ?? "",
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      SizedBox(height: 10),
+                      Text(
+                        'Source: ${articles.source?.name ?? ""}',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontStyle: FontStyle.italic,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 30.0, left: 160),
+                        child: InkWell(
+                          onTap: () {},
+                          child: Column(
+                            children: [
+                              Text(
+                                "View Full Article",
+                                style:
+                                    Theme.of(context).textTheme.headlineSmall,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 180.0),
+                                child: Icon(Icons.arrow_right),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
+              )
             ],
           ),
         ),
