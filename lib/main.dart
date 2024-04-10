@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:bloc/bloc.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -10,12 +11,14 @@ import 'package:new_c10_monday/screens/tabs/settings_tab.dart';
 import 'package:new_c10_monday/screens/widgets/search_widget.dart';
 import 'package:provider/provider.dart';
 
+import 'observer.dart';
 import 'screens/news_details_page.dart';
 import 'shared/styles/my_theme_data.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await dotenv.load(fileName: ".env");
+  Bloc.observer = MyBlocObserver();
   await EasyLocalization.ensureInitialized();
 
   runApp(MultiProvider(

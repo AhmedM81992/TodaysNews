@@ -5,7 +5,7 @@ import 'package:new_c10_monday/screens/widgets/source_item.dart';
 import 'package:new_c10_monday/shared/network/remote/api_manager.dart';
 
 class NewsTab extends StatefulWidget {
-  List<Sources> sources;
+  List<Sources> sources; //we will take this list and put in the cubit
   NewsTab({required this.sources, super.key});
 
   @override
