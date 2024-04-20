@@ -36,7 +36,7 @@ class NewsItem extends StatelessWidget {
                 },
                 child: CachedNetworkImage(
                   imageUrl: article.urlToImage ?? "",
-                  height: dynamicHeight * 0.37,
+                  height: dynamicHeight * 0.295,
                   fit: BoxFit.fill,
                   progressIndicatorBuilder: (context, url, downloadProgress) =>
                       Center(

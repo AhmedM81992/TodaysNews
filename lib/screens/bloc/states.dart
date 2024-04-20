@@ -21,3 +21,5 @@ class HomeGetNewsErrorState extends HomeStates {
   String errorMessage;
   HomeGetNewsErrorState(this.errorMessage);
 }
+
+class ChangeSelectedSource extends HomeStates {}

@@ -36,15 +36,15 @@ class ApiManager {
   //   }
   // } we took this a used it in cubit.dart not needed anymore here
 
-  static Future<NewsDataModel> getNewsData(String sourceId) async {
-    Uri url = Uri.https(
-        Constants.BASE_URL, EndPoints.newsData, {"sources": sourceId});
-    http.Response response =
-        await http.get(url, headers: {AppStrings.apiKey: Constants.API_KEY!});
-    var json = jsonDecode(response.body);
-
-    return NewsDataModel.fromJson(json);
-  }
+  // static Future<NewsDataModel> getNewsData(String sourceId) async {
+  //   Uri url = Uri.https(
+  //       Constants.BASE_URL, EndPoints.newsData, {"sources": sourceId});
+  //   http.Response response =
+  //       await http.get(url, headers: {AppStrings.apiKey: Constants.API_KEY!});
+  //   var json = jsonDecode(response.body);
+  //
+  //   return NewsDataModel.fromJson(json);
+  // }
 
   static Future<NewsSearchModel> getNewsSearch(String searchTerm) async {
     Uri url = Uri.https(Constants.BASE_URL, EndPoints.newsData,
